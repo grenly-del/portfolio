@@ -647,9 +647,7 @@ img {
 }	
 
 .skils .content .col .row svg circle:nth-child(2) {
-	stroke: var(--color-red);
-}
-svg circle:nth-child(2) {
+	/*stroke: var(--color-red);*/
 	stroke-dasharray: 440;
 	stroke-dashoffset: 440;
 }
