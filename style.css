@@ -2,6 +2,8 @@
 	--color-red : #2e29dc;
 	--bg-color :#0f0e0e;
 	--box-color:  #090909;
+	--bg-color2: #070707;
+	--data: attr(data-persen);
 }
 
 
@@ -55,7 +57,7 @@ body {
 	/*flex-basis: 5%;*/
 	position: fixed;
 	display: flex;
-	background: #090909;
+	background: #0a0a0a;
 	flex-direction: column-reverse;
 	align-items: center;
 	/*transform: rotate(270deg);*/
@@ -300,15 +302,18 @@ img {
 
 
 .about .title,
-.project .title {
+.project .title,
+.skils .title {
 	text-align: center;
 	font-weight: 600;
 	position: relative;
 	font-size: 1.6em;
 	padding: 20px 0;
+	color: #fff;
 }
 .about .title::before,
-.project .title::before {
+.project .title::before,
+.skils .title::before {
 	content: attr(data-header);
 	font-size: 0.7em;
 	position: absolute;
@@ -508,13 +513,15 @@ img {
 
 /*about selesai*/
 
+
+
 .project {
 	position: relative;
 	/*width: 100%;*/
 	/*left: 5%;*/
 	color: #fff;
 	padding: 10px 0 30px;
-	background-color: var(--bg-color);
+	background-color: var(--bg-color2);
 }
 
 .project .content {
@@ -582,8 +589,95 @@ img {
 	top: 50%;
 }
 
+/*PROJECT SELESAI*/
 
 
+.skils {
+	background:  var(--bg-color);
+	width: 100%;
+}
+
+.skils .container {
+	position: relative;
+}
+
+.skils .content {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-content: space-evenly;
+	align-items: center;
+	color: #fff;
+	position: relative;
+	margin: 30px auto;
+	/*margin-left: -50px;*/
+	width: 100%;
+	border-radius: 10px;
+	background-color: var(--bg-color2);
+}
+.skils .content .col {
+	padding: 20px 10px;
+	position: relative;
+	text-align: center;
+}
+.skils .content .col .persen {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -70%);
+}
+.skils .content .col .persen h2 {
+	font-size: 2em;
+	color: #fff;
+}
+.skils .content .col .row svg {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	z-index: 1000;
+}
+
+.skils .content .col .row svg circle {
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke: #211e21;
+	stroke-width: 8;
+	stroke-linecap: round;
+	transform: translate(5px, 5px);
+}	
+
+.skils .content .col .row svg circle:nth-child(2) {
+	stroke: var(--color-red);
+}
+svg circle:nth-child(2) {
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+}
+
+.skils .content .col .teks {
+	/*font-weight: 700;*/
+	font-size: 1em;
+}
+
+.skils .content .col:nth-child(1) .row svg circle:nth-child(2) {
+	stroke-dashoffset: calc(440 - (440 * 90) / 100);
+	stroke: #f62020;
+}
+
+.skils .content .col:nth-child(2) .row svg circle:nth-child(2) {
+	stroke-dashoffset: calc(440 - (440 * 70) / 100);
+	stroke: #13e9d7;
+}
+
+.skils .content .col:nth-child(3) .row svg circle:nth-child(2) {
+	stroke-dashoffset: calc(440 - (440 * 85) / 100);
+	stroke: #a513e9;
+}
+
+.skils .content .col:nth-child(4) .row svg circle:nth-child(2) {
+	stroke-dashoffset: calc(440 - (440 * 30) / 100);
+	stroke: #3ff321;
+}
 
 
 
@@ -692,6 +786,17 @@ img {
 		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 100px;
 		/*box-sizing: border-box;*/
+	}
+	.skils .content {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 700px) {
+	.skils .content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
