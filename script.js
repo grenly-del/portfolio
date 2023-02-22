@@ -4,7 +4,14 @@ const card = document.querySelectorAll('.about .content .right .section .box .ca
 const btnInfo = document.querySelectorAll('.about .content .right .section .box .btn-info')
 const close = document.querySelectorAll('.about .content .right .section .box .card .close')
 const arrNama = ['GRANTLY ', 'ANTONIO ', 'EDWARD ', 'SORONGAN '];
+const menu = document.querySelector('.humberger');
+const navbar = document.querySelector('.navbar');
+const navMenu = document.querySelector('.navbar .menu')
 
+
+menu.addEventListener('click', (e) => {
+	navbar.classList.toggle('active')
+})	
 
 btnInfo.forEach(function(e) {
 	e.addEventListener('click', function(e) {

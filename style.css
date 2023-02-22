@@ -66,7 +66,7 @@ body {
 	color: #fff;
 	height: 100%;
 	width: 70px;
-	grid-column: rever;
+	grid-column: reverse;
 	z-index: 999;
 	left: 0;
 	bottom: 0;
@@ -90,7 +90,22 @@ body {
 	transform: rotate(270deg);
 	list-style: none;
 }
+.manu {
+	/*background-color: red;*/
+	/*width: 100px;*/
+	position: fixed;
+	/*position: absolute;*/
+	right: 20px;
+	top: 10px;
+	z-index: 9999999;
+	display: none;
+}
 
+.manu .humberger {
+	font-size: 1.7em;
+	cursor: pointer;
+	color:  #fff;
+}
 
 .navbar ul li {
 	margin: 0 20px;
@@ -428,7 +443,7 @@ img {
 .about .content .right .section .box .card .card-info {
 	border-radius: 10px;
 	width: 40%;
-	height: 40%;
+	height: 70%;
 	padding: 15px 30px;
 	background-color: var(--box-color);
 	position: relative;
@@ -648,8 +663,6 @@ img {
 
 .skils .content .col .row svg circle:nth-child(2) {
 	/*stroke: var(--color-red);*/
-	stroke-dasharray: 440;
-	stroke-dashoffset: 440;
 }
 
 .skils .content .col .teks {
@@ -658,24 +671,69 @@ img {
 }
 
 .skils .content .col:nth-child(1) .row svg circle:nth-child(2) {
-	stroke-dashoffset: calc(440 - (440 * 90) / 100);
 	stroke: #f62020;
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+	animation: skillAnime1 2.5s linear forwards;
+	animation-delay: 1s;
 }
 
 .skils .content .col:nth-child(2) .row svg circle:nth-child(2) {
-	stroke-dashoffset: calc(440 - (440 * 70) / 100);
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+	animation: skillAnime2 2.5s linear forwards;
+	animation-delay: 1s;
 	stroke: #13e9d7;
 }
 
+
 .skils .content .col:nth-child(3) .row svg circle:nth-child(2) {
-	stroke-dashoffset: calc(440 - (440 * 85) / 100);
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+	animation: skillAnime3 2.5s linear forwards;
+	animation-delay: 1s;
 	stroke: #a513e9;
 }
 
 .skils .content .col:nth-child(4) .row svg circle:nth-child(2) {
-	stroke-dashoffset: calc(440 - (440 * 30) / 100);
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+	animation: skillAnime4 2.5s linear forwards;
+	animation-delay: 1s;
 	stroke: #3ff321;
 }
+
+
+/*animasi untuk skills*/
+
+@keyframes skillAnime1 {
+
+	100% {
+		stroke-dashoffset: 44;
+	}
+}
+
+@keyframes skillAnime2 {
+
+	100% {
+		stroke-dashoffset: 132;
+	}
+}
+
+@keyframes skillAnime3 {
+
+	100% {
+		stroke-dashoffset: 66;
+	}
+}
+
+@keyframes skillAnime4 {
+
+	100% {
+		stroke-dashoffset: 308;
+	}
+}
+
 
 
 
@@ -792,9 +850,105 @@ img {
 }
 
 @media (max-width: 700px) {
+	.navbar {
+		justify-content: flex-end;
+		background-color: transparent;
+		width: 100%;
+		transform: translateX(100%);
+		height: 100%;
+		transition: all 0.6s;
+	}
+	.navbar .icon-share {
+		display: none
+	}
+
+	.navbar .logo {
+		display: none;
+	}
+
+	.navbar .menu {
+		top: 0;
+		bottom: 0;
+		/*right: 20px;*/
+		left: 56%;
+		width: 100%;
+		height: 100%;
+		background: red;
+		position: absolute;
+		text-align: center;
+		flex-direction: column;
+		transform: rotate(0deg);
+	}
+
+	.navbar.active {
+		transform: translateX(0);
+	}
+
+	.navbar.active .menu {
+		right: 56%;
+	}
+
+	.navbar .menu li {
+		display: inline-block;
+		transform: translateX(-30%);
+		margin-top: 35px;
+	}
+
+	.about .content .right .section .box .card .card-info {
+		border-radius: 10px;
+		width: 70%;
+		height: 40%;
+		padding: 15px 30px;
+	}
+
+	.main {
+		/*width: 100%;*/
+		margin-left: 0;
+	}
+	.manu {
+		display: block;
+	}
 	.skils .content {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
+
+@media (max-width: 600px) {
+	.home .container .content .info h1 {
+		font-size: 1.5em;
+	}
+	.home .container .content .info h2 {
+		font-size: 1em;
+	}
+	.home .container .content .info p {
+		font-size: 0.8em;
+	}
+
+	.about .content .right .section .box .card .card-info i {
+		font-size: 1.5em;
+		margin: 5px auto 25px;
+	}
+	.about .content .right .section .box .card .card-info h2 {
+		font-size: 1em;
+	}
+	.about .content .right .section .box .card .card-info p {
+		font-size: 0.6em;
+	}
+
+	.about .content .right .section .box .card .card-info .info-content.pengalaman ul li h3 {
+		font-size: 0.8em;
+	}
+
+	.about .content .right .section .box .card .card-info .info-content.hobi ul li p,
+	.about .content .right .section .box .card .card-info .info-content.pengalaman ul li p {
+		font-size: 0.6em;
+	}
+
+	.about .content .right .section .box .card .card-info .info-content ul:nth-child(2) {
+		list-style: none;
+		font-size: 0.9em;
+}
+
+}
