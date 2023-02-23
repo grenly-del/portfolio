@@ -92,8 +92,11 @@ body {
 }
 .manu {
 	/*background-color: red;*/
+<<<<<<< HEAD
 	/*width: 100px;*/
 	/*position: fixed;*/
+=======
+>>>>>>> 5e171794f4206df70cb208dae9bff3d758a9e32e
 	position: absolute;
 	right: 20px;
 	top: 10px;
