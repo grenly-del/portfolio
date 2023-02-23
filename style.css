@@ -318,7 +318,8 @@ img {
 
 .about .title,
 .project .title,
-.skils .title {
+.skils .title,
+.contact .title {
 	text-align: center;
 	font-weight: 600;
 	position: relative;
@@ -328,7 +329,8 @@ img {
 }
 .about .title::before,
 .project .title::before,
-.skils .title::before {
+.skils .title::before,
+.contact .title::before {
 	content: attr(data-header);
 	font-size: 0.7em;
 	position: absolute;
@@ -610,6 +612,7 @@ img {
 .skils {
 	background:  var(--bg-color);
 	width: 100%;
+	padding: 10px 0 30px;
 }
 
 .skils .container {
@@ -620,6 +623,7 @@ img {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	justify-content: space-evenly;
+	grid-gap: 20px;
 	align-items: center;
 	color: #fff;
 	position: relative;
@@ -627,12 +631,13 @@ img {
 	/*margin-left: -50px;*/
 	width: 100%;
 	border-radius: 10px;
-	background-color: var(--bg-color2);
 }
 .skils .content .col {
+	background-color: var(--bg-color2);
 	padding: 20px 10px;
 	position: relative;
 	text-align: center;
+	border-radius: 15px;
 }
 .skils .content .col .persen {
 	position: absolute;
@@ -701,6 +706,109 @@ img {
 	animation: skillAnime4 2.5s linear forwards;
 	animation-delay: 1s;
 	stroke: #3ff321;
+}
+
+
+/*SKILLS SELESAI*/
+
+
+.contact {
+	padding: 10px 0 30px;
+	background: var(--bg-color2);
+	color: #fff;
+	width: 100%;
+	font-family: 'Poppins', sans-serif;
+}
+
+.contact .content {
+	margin-top: 35px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.contact .content .left {
+	/*margin-left: 100px;*/
+	/*text-align: center;*/
+	justify-self: left;
+}
+
+.contact .content .left .col {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.contact .content .left .col i {
+	font-size: 1.3em;
+}
+
+
+.contact .content .left .col p {
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.9rem;
+}
+
+
+.contact .content .left .col p:nth-child(2) {
+	font-weight: 600;
+	font-size: 1em;
+}
+
+.contact .content .left .col a i {
+	font-size: 1em;
+	transition: all 0.5s;
+	color: #fff;
+}
+
+.contact .content .left .col a i:hover {
+	color: var(--color-red);
+}
+
+.contact .content .right {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact .content .right h1 {
+	font-size: ;
+}
+
+.contact .content .right .form-input {
+	margin-top: 20px;
+	display: flex;
+	grid-gap: 10px;
+	flex-direction: column;
+}
+
+.contact .content .right form input,
+.contact .content .right form textarea {
+	background: var(--bg-color);
+	outline: none;
+	border:  none;
+	border:  2px solid var(--color-red);
+	border-radius: 5px;
+	padding: 10px 15px;
+	color:  #fff;
+	resize: none;
+}
+
+
+
+
+
+
+.contact .content .right .form-input button {
+	width: 100px;
+	padding: 6px 15px;
+	color: #fff;
+	background: var(--color-red);
+	border-radius: 5px;
+	cursor: pointer;
+	border:  2px solid var(--color-red);
+	transition: background 0.3s ease;
+}
+
+.contact .content .right .form-input button:hover {
+	background:  none;
 }
 
 
@@ -912,6 +1020,28 @@ img {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	.contact .content .left .col {
+		text-align: left;
+	}
+
+	.contact .content .left .col i {
+		font-size: 1.1em;
+	}
+
+
+	.contact .content .left .col p {
+		font-size: 0.8rem;
+	}
+
+
+	.contact .content .left .col p:nth-child(2) {
+		font-size: 0.9em;
+	}
+
+	.contact .content .left .col a i {
+		font-size: 0.9em;
+	}
 }
 
 
@@ -949,7 +1079,19 @@ img {
 	.about .content .right .section .box .card .card-info .info-content ul:nth-child(2) {
 		list-style: none;
 		font-size: 0.9em;
-}
+	}
+
+	.contact .content {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.contact .content .left {
+		justify-self: center;
+	}
+
+	.contact .content .left .col {
+		text-align: center;
+	}
 
 }
 
