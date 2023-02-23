@@ -92,9 +92,7 @@ body {
 }
 .manu {
 	/*background-color: red;*/
-	/*width: 100px;*/
-	position: fixed;
-	/*position: absolute;*/
+	position: absolute;
 	right: 20px;
 	top: 10px;
 	z-index: 9999999;
