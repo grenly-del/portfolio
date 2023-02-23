@@ -67,7 +67,7 @@ body {
 	height: 100%;
 	width: 70px;
 	grid-column: reverse;
-	z-index: 999;
+	z-index: 99999999999999;
 	left: 0;
 	bottom: 0;
 	right: 0;
@@ -93,12 +93,16 @@ body {
 .manu {
 	/*background-color: red;*/
 	/*width: 100px;*/
-	position: fixed;
-	/*position: absolute;*/
+	/*position: fixed;*/
+	position: absolute;
 	right: 20px;
 	top: 10px;
-	z-index: 9999999;
+	z-index: 9999999999;
 	display: none;
+}
+
+.manu.active {
+	position: fixed;
 }
 
 .manu .humberger {
@@ -211,6 +215,7 @@ body {
 .home .container .content .info p {
 	font-size: 1.5em;
 	font-weight: 700;
+	mix-blend-mode: difference;
 }
 
 .home .container .content .info .btn,
@@ -560,6 +565,12 @@ img {
 	border-radius: 10px;
 	/*background-color: var(--box-color);*/
 	transition: transform 0.7s;
+}
+
+.project .content .column .describsi i {
+	font-size: 1.5em;
+	color: #fff;
+	font-weight: 800;
 }
 
 .project .content .column::after {

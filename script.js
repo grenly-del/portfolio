@@ -6,12 +6,37 @@ const close = document.querySelectorAll('.about .content .right .section .box .c
 const arrNama = ['GRANTLY ', 'ANTONIO ', 'EDWARD ', 'SORONGAN '];
 const menu = document.querySelector('.humberger');
 const navbar = document.querySelector('.navbar');
-const navMenu = document.querySelector('.navbar .menu')
+const navMenu = document.querySelectorAll('.navbar .menu li')
+const manu = document.querySelector('.manu')
+const home = document.querySelector('#home.home')
+const about = document.querySelector('.about')
+const main = document.querySelector('.main')
 
+
+
+// ======SCROLL KE ELEMENT TERTENTU=======
+
+navMenu.forEach(e => {
+	e.addEventListener('click', function(e) {
+		let id = this.textContent
+		let element = document.getElementById(id)
+		element.scrollIntoView({
+			behavior : "smooth",
+			block: "start"
+		})
+	})
+})
+
+
+// =======MENU TOGGLE / HUMBERGER MENU========
 
 menu.addEventListener('click', (e) => {
 	navbar.classList.toggle('active')
+	manu.classList.toggle('active')
 })	
+
+
+// =======CARD ELEMENT========
 
 btnInfo.forEach(function(e) {
 	e.addEventListener('click', function(e) {
@@ -25,6 +50,13 @@ btnInfo.forEach(function(e) {
 		})
 	})
 })
+
+
+
+
+
+// ======TEXT TYPING=======
+
 
 let i = 0;
 let h = 0;
