@@ -812,6 +812,44 @@ img {
 }
 
 
+.footer {
+	background-color: #000;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+}
+
+.footer .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.footer h2 {
+	text-align: center;
+	font-size: 1em;
+}
+
+.footer .media-sosial {
+	margin-top: 5px;
+	text-align: center;
+}
+
+.footer .media-sosial i {
+	margin: 0 10px;
+	font-size: 1.2em;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+
+.footer .media-sosial a:hover i{
+	color: #fff;
+}
+
+
+
+
+
 /*animasi untuk skills*/
 
 @keyframes skillAnime1 {
