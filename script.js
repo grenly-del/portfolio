@@ -11,7 +11,46 @@ const manu = document.querySelector('.manu')
 const home = document.querySelector('#home.home')
 const about = document.querySelector('.about')
 const main = document.querySelector('.main')
+const email = document.querySelector('.email')
+const copyBtn = document.querySelector('i.btncopy')
+const copyBtn2 = document.querySelector('.footer .btncopy')
+console.log(email)
 
+
+
+// ========COPY TEXT CLIPBOARD=========
+
+
+function copying(element) {
+	if(!element) {
+		return
+	}
+
+	let text = element.innerText
+
+	let elementNew = document.createElement('input')
+	elementNew.setAttribute('value', text)
+	document.body.appendChild(elementNew)
+
+	elementNew.select()
+
+	document.execCommand('copy')
+
+	elementNew.parentNode.removeChild(elementNew)
+
+	if( document.execCommand('copy') ) {
+		alert('Email Sudah Tercopy!!!')
+	}
+}
+
+
+copyBtn.addEventListener('click', (e) => {
+	copying(email)
+})
+
+copyBtn2.addEventListener('click', (e) => {
+	copying(email)
+})
 
 
 // ======SCROLL KE ELEMENT TERTENTU=======

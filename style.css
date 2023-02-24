@@ -258,50 +258,38 @@ body {
 .about .content .right .btn:hover::after {
 	transform: scale(1);
 }
-.container .content .media-sosial {
-	overflow: hidden;
+.home .container .content .media-sosial {
+	/*overflow: hidden;*/
 	position: relative;
 	/*width: 100%;*/
-	left: -50px;
+	/*left: -50px;*/
 }
 
-.container .content .media-sosial .icon {
+.home .container .content .media-sosial .icon {
+	transition: transform 0.3s ease-in-out;
 	z-index: 999999;
 	display: inline-block;
-	margin: 20px 0 0 50px;
-	/*float: right;*/
+	margin: 10px 15px;
 	align-items: center;
-	width: 0;
 }
 
-.container .content .media-sosial .whatsapp-icon svg,
-.container .content .media-sosial .ig-icon svg {
-	width: 25px;
-	height: 25px;
+.home .container .content .media-sosial .icon i {
+	font-size: 1.5em;
+	font-weight: 500;
 	cursor: pointer;
-	/*background-color: red;*/
-	margin-bottom: 10px;
-	transition: all .3s;
-	fill: red;
-	margin
-} 
-.container .content .media-sosial .ig-icon svg {
-	/*margin-left: -20px;s*/
+	border: none;
+	outline: none;
+	color: #fff;
+	position: relative;
 }
 
-.container .content .media-sosial .whatsapp-icon svg:hover,
-.container .content .media-sosial .ig-icon svg:hover {
-	transform: translateY(-5px);
+
+.home .container .content .media-sosial .icon:hover {
+	transform: scale(1.2);
 }
 
-.container .content .media-sosial .whatsapp-icon svg .cls-1,
-.container .content .media-sosial .ig-icon svg .cls-1 {
-	fill: #fff;
-
-}
-.container .content .media-sosial .whatsapp-icon svg .cls-2,
-.container .content .media-sosial .ig-icon svg .cls-2 {
-	stroke: #fff;
+.home .container .content .media-sosial .icon:hover i {
+	color: #fff;
 }
 
 
@@ -624,6 +612,7 @@ img {
 	background:  var(--bg-color);
 	width: 100%;
 	padding: 10px 0 30px;
+	font-family: "Poppins", sans-serif;;
 }
 
 .skils .container {
@@ -764,13 +753,28 @@ img {
 	font-size: 1em;
 }
 
+.contact .content .left .col p:nth-child(3) {
+	margin-bottom: 5px;
+}
+
+.contact .content .left .col a {
+	margin: 20px 0;
+}
+
 .contact .content .left .col a i {
 	font-size: 1em;
 	transition: all 0.5s;
 	color: #fff;
 }
 
-.contact .content .left .col a i:hover {
+.contact .content .left .col i.btncopy {
+	font-size: 1em;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.contact .content .left .col a i:hover,
+.contact .content .left .col i.btncopy:hover {
 	color: var(--color-red);
 }
 
@@ -851,10 +855,12 @@ img {
 	font-size: 1.2em;
 	cursor: pointer;
 	transition: all 0.4s;
+	color: #fff;
 }
 
-.footer .media-sosial a:hover i{
-	color: #fff;
+.footer .media-sosial a:hover i,
+.footer .media-sosial i:hover{
+	color: var(--color-red);
 }
 
 
@@ -1105,29 +1111,38 @@ img {
 		font-size: 0.8em;
 	}
 
+	.about .content .right .section .box .card .card-info {
+		width: 90%;
+		height: 60%;
+	}
+
 	.about .content .right .section .box .card .card-info i {
-		font-size: 1.5em;
+		font-size: 1.9em;
 		margin: 5px auto 25px;
 	}
 	.about .content .right .section .box .card .card-info h2 {
 		font-size: 1em;
 	}
 	.about .content .right .section .box .card .card-info p {
-		font-size: 0.6em;
+		font-size: 0.9em;
 	}
 
 	.about .content .right .section .box .card .card-info .info-content.pengalaman ul li h3 {
-		font-size: 0.8em;
+		font-size: 1em;
 	}
 
 	.about .content .right .section .box .card .card-info .info-content.hobi ul li p,
 	.about .content .right .section .box .card .card-info .info-content.pengalaman ul li p {
-		font-size: 0.6em;
+		font-size: 0.9em;
+	}
+
+	.about .content .right .section .box .card .card-info .info-content ul {
+		margin-top: 20px;
 	}
 
 	.about .content .right .section .box .card .card-info .info-content ul:nth-child(2) {
 		list-style: none;
-		font-size: 0.9em;
+		font-size: 1.1em;
 	}
 
 	.contact .content {

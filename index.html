@@ -5,10 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Website Modern</title>
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"> <!-- BOOTSTRAP LIBRARY CDN -->
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- CDN FOR ICON -->
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">     <!-- FONT AWESOME CDN -->
+
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- AOS CDN LIBRARY --> 
+
 </head>
 <body>
 
@@ -38,55 +43,20 @@
 					<div class="container">
 						<div class="content">
 							<h2 class="logo">My <span>PortFolio</span></h2>
-							<div class="info">
+							<div class="info" data-aos="fade-right"  data-aos-duration="1100">
 								<h2>SELAMAT DATANG DI PORTFOLIO SAYA</h2>
 								<h1>NAMA SAYA ADALAH <span class="nama">GRANTLY SORONGAN</span></h1>
 								<p>Saya tinggal di Indonesia, Sulawesi Utara, Manado</p>
 								<button class="btn">Selengkapnya</button>
 							</div>
 							<div class="media-sosial">
-								<div class="icon whatsapp-icon">
-								
-									<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11" class="i-wa">
-									  <defs>
-									    <style>
-									      .cls-1 {
-									        fill: #2e29dc;
-									      }
-
-									      .cls-2 {
-									        fill: none;
-									        stroke: #2e29dc;
-									        stroke-miterlimit: 10;
-									      }
-									    </style>
-									  </defs>
-									  <circle class="cls cls-2" cx="5.5" cy="5.5" r="5"/>
-									  <path class="cls cls-1" d="M4.48,4.24c.33-.1,.59-.39,.67-.72s-.07-.71-.34-.93-.61-.25-.93-.16c-.38,.11-.74,.36-.99,.66-.23,.27-.34,.61-.31,.96,.03,.41,.19,.79,.35,1.16,.18,.42,.4,.82,.65,1.19s.53,.72,.84,1.05c.29,.31,.61,.6,.97,.82,.32,.19,.69,.33,1.07,.35s.8-.08,1.14-.28,.62-.49,.76-.85c.13-.33,.13-.71-.03-1.02s-.47-.52-.82-.52c-.2,0-.4,.07-.55,.2-.14,.13-.21,.3-.26,.48-.08,.3-.16,.68-.49,.8-.27,.09-.56-.08-.77-.25-.33-.27-.62-.59-.88-.93s-.52-.73-.7-1.14c-.08-.17-.15-.35-.15-.53,0-.18,.09-.34,.26-.42,.15-.07,.33-.04,.46,.06"/>
-									</svg>	
-									<!-- <p>+6282313123</p>	 -->
+								<div class="icon">
+									<a href="https://api.whatsapp.com/send?phone=6289527173365"><i class="bi bi-whatsapp"></i>	</a>
+									
 								</div>
-								<div class="icon ig-icon">
-									<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.22 10.22">
-										  <defs>
-										    <style>
-										      .cls-1 {
-										        fill: #444ea1;
-										      }
-
-										      .cls-2 {
-										        fill: none;
-										        stroke: #444ea1;
-										        stroke-miterlimit: 10;
-										        stroke-width: .8px;
-										      }
-										    </style>
-										  </defs>
-										  <circle class="cls-2" cx="5.11" cy="5.11" r="2.06"/>
-										  <rect class="cls-2" x=".4" y=".4" width="9.42" height="9.42" rx="1" ry="1"/>
-										  <circle class="cls-1" cx="8.08" cy="2.14" r=".91"/>
-									</svg>
+								<div class="icon">
 									<!-- <p>grantly_edward</p> -->
+									<a href="https://www.instagram.com/grantly_edward"><i class="bi bi-instagram"></i></a>
 								</div>
 							</div>
 						</div>
@@ -100,12 +70,12 @@
 
 				<section class="about" id="About">
 					<div class="container">
-						<h1 class="title" data-header="About Me">ABOUT</h1>
+						<h1 class="title" data-header="About Me" data-aos="fade-up"  data-aos-offset="300">ABOUT</h1>
 						<div class="content">
 
-							<img src="img/myFoto.jpeg">
+							<img src="img/myFoto.jpeg" data-aos="fade-right"  data-aos-offset="300" data-aos-duration="1100">
 
-							<div class="right">
+							<div class="right" data-aos="fade-left"  data-aos-offset="300" data-aos-duration="1100">
 								<h1>Saya Adalah <span>Grantly</span></h1>
 								<p>Saya tinggal di Sulawesi Utara, Indonesia. Dari kecil saya sangat tertarik dengan dunia IT, dan saya senang belajar tentang IT. Pertama kali saya belajar tentang IT pada saat saya berusia 10 Tahun, saat itu saya suka banget bongkar-bongkar aplikasi di Handphone</p>
 								<div class="section">
@@ -218,9 +188,9 @@
 
 				<section class="project" id="Project">
 				<div class="container">
-					<h1 class="title" data-header="My Project">PROJECT</h1>
+					<h1 class="title" data-header="My Project" data-aos="fade-up">PROJECT</h1>
 					<div class="content">
-						<div class="column">
+						<div class="column" data-aos="fade-right">
 							<img src="img/designe3r.jpg" alt="">
 							<div class="describsi">
 								<h2>Designer</h2>
@@ -228,7 +198,7 @@
 								<i class="bi bi-box"></i>
 							</div>
 						</div>
-						<div class="column">
+						<div class="column" data-aos="fade-up">
 							<img src="img/video-editor.jpg" alt="">
 							<div class="describsi">
 								<h2>Video Editor</h2>
@@ -236,7 +206,7 @@
 								<i class="bi bi-camera-reels"></i>
 							</div>
 						</div>
-						<div class="column">
+						<div class="column" data-aos="fade-left">
 							<img src="img/coding2.jpg" alt="">
 							<div class="describsi">
 								<h2>Web Design</h2>
@@ -255,9 +225,9 @@
 
 		<section class="skils" id="Skills">
 			<div class="container">
-				<div class="title" data-header="My Skills">SKILLS</div>
+				<div class="title" data-header="My Skills" data-aos="fade-down">SKILLS</div>
 				<div class="content">
-					<div class="col">
+					<div class="col" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="120">
 						<div class="row">
 							<svg>
 								<circle cx="70" cy="70" r="70" class="design" data-persen="90"></circle>
@@ -269,7 +239,7 @@
 						</div>
 						<div class="teks">DESIGN</div>
 					</div>
-					<div class="col">
+					<div class="col" data-aos="fade-up">
 						<div class="row">
 							<svg>
 								<circle cx="70" cy="70" r="70" class="video-editor" data-persen="70"></circle>
@@ -281,7 +251,7 @@
 						</div>
 						<div class="teks">VIDEO EDITOR</div>
 					</div>
-					<div class="col">
+					<div class="col" data-aos="fade-up">
 						<div class="row">
 							<svg>
 								<circle cx="70" cy="70" r="70" class="frontend" data-persen="85"></circle>
@@ -293,7 +263,7 @@
 						</div>
 						<div class="teks">FRONTEND</div>
 					</div>
-					<div class="col">
+					<div class="col" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="120">
 						<div class="row">
 							<svg>
 								<circle cx="70" cy="70" r="70" class="backend" data-persen="30"></circle>
@@ -315,35 +285,35 @@
 
 				<section class="contact" id="Contact">
 			<div class="container">
-				<div class="title" data-header="My Contact">CONTACT</div>
+				<div class="title" data-header="My Contact" data-aos="fade-up">CONTACT</div>
 				<div class="content">
-					<div class="left">
+					<div class="left" data-aos="fade-right" data-aos-duration="1200">
 						<div class="col">
 							<i class="bi bi-instagram"></i>
 							<p>INSTAGRAM</p>
 							<p>grantly_edward</p>
-							<a href="#"><i class="bi bi-arrow-right-circle"></i></a>
+							<a href="https://www.instagram.com/grantly_edward"><i class="bi bi-arrow-right-circle"></i></a>
 						</div>
 						<div class="col">
 							<i class="bi bi-whatsapp"></i>
 							<p>WHATSAPP</p>
-							<p>08123445666</p>
-							<a href="#"><i class="bi bi-arrow-right-circle"></i></a>
+							<p>089527173365</p>
+							<a href="https://api.whatsapp.com/send?phone=6289527173365"><i class="bi bi-arrow-right-circle"></i></a>
 						</div>
 						<div class="col">
 							<i class="bi bi-facebook"></i>
 							<p>FACEBOOK</p>
 							<p>Grantly Sorongan</p>
-							<a href="#"><i class="bi bi-arrow-right-circle"></i></a>
+							<a href="https://web.facebook.com/profile.php?id=100071522211978"><i class="bi bi-arrow-right-circle"></i></a>
 						</div>
 						<div class="col">
 							<i class="bi bi-envelope"></i>
 							<p>EMAIL</p>
-							<p>edwardantonio1313@gmaill.com</p>
-							<a href="#"><i class="bi bi-arrow-right-circle"></i></a>	
+							<p class="email">edwardantonio1313@gmaill.com</p>
+							<i class="bi-arrow-right-circle btncopy" onclick="copying()"></i>
 						</div>
 					</div>
-					<div class="right">
+					<div class="right" data-aos="fade-left" data-aos-duration="1200">
 						<h1>Message</h1>
 						<form action="#">
 							<div class="form-input">
@@ -368,10 +338,10 @@
 				<div class="container">
 					<h2><i class="bi bi-c-circle"></i> Copyright</h2>
 					<div class="media-sosial">
-						<a href="#"><i class="bi bi-whatsapp"></i></a>
-						<a href="#"><i class="bi bi-instagram"></i></a>
-						<a href="#"><i class="bi bi-facebook"></i></a>
-						<a href="#"><i class="bi bi-envelope"></i></a>
+						<a href="https://api.whatsapp.com/send?phone=6289527173365"><i class="bi bi-whatsapp"></i></a>
+						<a href="https://www.instagram.com/grantly_edward"><i class="bi bi-instagram"></i></a>
+						<a href="https://web.facebook.com/profile.php?id=100071522211978"><i class="bi bi-facebook"></i></a>
+						<i class="bi bi-envelope btncopy" onclick="copying()"></i>
 					</div>
 				</div>
 			</footer>
@@ -383,7 +353,15 @@
 
 	<!-- JAVASCRIPT LOGIKA -->
 
+
 	<script src="script.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  	<script>
+    AOS.init({
+    	once: true,
+    	duration: 450
+    });
+  	</script>
 
 </body>
 </html>
