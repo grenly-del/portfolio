@@ -1,11 +1,10 @@
-const span = document.querySelector('.home .container .content .nama');
+const span = document.querySelector('.home .container .content .nama')
 const box = document.querySelectorAll('.about .content .right .section .box')
 const card = document.querySelectorAll('.about .content .right .section .box .card')
 const btnInfo = document.querySelectorAll('.about .content .right .section .box .btn-info')
 const close = document.querySelectorAll('.about .content .right .section .box .card .close')
-const arrNama = ['GRANTLY ', 'ANTONIO ', 'EDWARD ', 'SORONGAN '];
-const menu = document.querySelector('.humberger');
-const navbar = document.querySelector('.navbar');
+const menu = document.querySelector('.humberger')
+const navbar = document.querySelector('.navbar')
 const navMenu = document.querySelectorAll('.navbar .menu li')
 const manu = document.querySelector('.manu')
 const home = document.querySelector('#home.home')
@@ -53,6 +52,8 @@ copyBtn2.addEventListener('click', (e) => {
 })
 
 
+
+
 // ======SCROLL KE ELEMENT TERTENTU=======
 
 navMenu.forEach(e => {
@@ -67,12 +68,16 @@ navMenu.forEach(e => {
 })
 
 
+
+
 // =======MENU TOGGLE / HUMBERGER MENU========
 
 menu.addEventListener('click', (e) => {
 	navbar.classList.toggle('active')
 	manu.classList.toggle('active')
 })	
+
+
 
 
 // =======CARD ELEMENT========
@@ -97,12 +102,16 @@ btnInfo.forEach(function(e) {
 // ======TEXT TYPING=======
 
 
+const arrNama = ['GRANTLY ', 'ANTONIO ', 'EDWARD ', 'SORONGAN '];
 let i = 0;
 let h = 0;
 let erase = false;
 let arrNew = []
 let selesai = false
 let time = 0
+let cloneArr
+
+
 
 function loop() {
 
@@ -110,24 +119,26 @@ function loop() {
 if( i < arrNama.length ) {
 	selesai = false
 	span.textContent = arrNew.join('')
-		if( !erase && h < arrNama[i].length ) {
+	cloneArr = arrNama[i].length + 1
+		
+		if( !erase && h < arrNama[i].length) {
 			let newName = arrNama[i][h]
 			arrNew.push(newName)
-
-
+			time = 500
 			h++
-			// console.log(h)
-
+			
 		} 
+
+
 
 		if( erase  && h <= arrNama[i].length ) {
 			arrNew.pop(arrNama[i][h])
-
+			time = 300
 			h--
 		}
 
 		if( h == arrNama[i].length ) {
-			// console.log(`nama ${arrNama[i]} sudah selesai`)
+			time = 1200
 
 			selesai = true
 			erase = true
@@ -139,6 +150,7 @@ if( i < arrNama.length ) {
 			arrNew = []
 			erase = false
 			selesai = false
+			time = 500
 			i++
 			if( i == arrNama.length ) {
 				i = 0
@@ -152,10 +164,17 @@ if( i < arrNama.length ) {
 		
 	}
 
-	
+	// let waktu = if( selesai ) {
+	// 	return 700
+	// } else if( erase ) {
+	// 	return 300
+	// } else if( h == arrNama[i].length ) {
+	// 	return 1000
+	// } else {
+	// 	return 500
+	// }
 
-	time = selesai ? 700 : erase ? 300 : 500
-	// console.log(time)
+	// time = selesai ? 1000 : erase ? 300 : 500
 	setTimeout(loop, time)
 
 
