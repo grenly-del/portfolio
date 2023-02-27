@@ -13,12 +13,62 @@ const main = document.querySelector('.main')
 const email = document.querySelector('.email')
 const copyBtn = document.querySelector('i.btncopy')
 const copyBtn2 = document.querySelector('.footer .btncopy')
+const row = document.querySelectorAll('.skils row')
 console.log(email)
 
 
 
-// ========COPY TEXT CLIPBOARD=========
 
+// ======== SKILS BAR ANIMASI =========
+
+
+document.addEventListener('aos:in', ({detail}) => {
+  let element = detail.children[0]
+  let data
+  let persen
+  let firstPersen = 0
+
+  try {
+
+  	if( element.classList.contains('row') ) {
+	  	element.classList.add('active')
+	  	persen = element.children[0].children[0].dataset.persen
+	  	data = element.children[1].children[0]
+	  	
+
+	  	setInterval(function(e){
+
+	  		if( firstPersen == persen ) {
+	  			clearInterval()
+	  		} else {
+	  			firstPersen++
+	  			data.innerHTML = `${firstPersen}%`
+	  		}
+
+	  	}, 20)
+
+
+
+	  } else {
+	  	console.log('sorry')
+	  }
+
+
+
+
+  }catch (e){
+  	console.log(`class tidak terdeteksi`)
+  }
+
+});
+
+
+
+
+
+
+
+// ========COPY TEXT CLIPBOARD=========
 
 function copying(element) {
 	if(!element) {

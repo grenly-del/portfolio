@@ -206,7 +206,7 @@ body {
 	position: absolute;
 	width: 3px;
 	height: 90%;
-	right: -10px;
+	right: -5px;
 	top: 0;
 	background-color: var(--color-red);
 	/*animation: typingAnimasi .3s ease-in;*/
@@ -437,8 +437,8 @@ img {
 
 .about .content .right .section .box .card .card-info {
 	border-radius: 10px;
-	width: 40%;
-	height: 70%;
+	width: 50%;
+	height: 500px;
 	padding: 15px 30px;
 	background-color: var(--box-color);
 	position: relative;
@@ -488,7 +488,7 @@ img {
 	margin-top: 7px;
 }
 .about .content .right .section .box .card .card-info .info-content.pengalaman ul li h3 {
-	font-size: 1,1em;
+	font-size: 1.1em;
 }
 
 .about .content .right .section .box .card .card-info .info-content.hobi ul li p,
@@ -666,12 +666,8 @@ img {
 	transform: translate(5px, 5px);
 }	
 
-.skils .content .col .row svg circle:nth-child(2) {
-	/*stroke: var(--color-red);*/
-}
 
 .skils .content .col .teks {
-	/*font-weight: 700;*/
 	font-size: 1em;
 }
 
@@ -679,33 +675,44 @@ img {
 	stroke: #f62020;
 	stroke-dasharray: 440;
 	stroke-dashoffset: 440;
-	animation: skillAnime1 1.5s linear forwards;
-	animation-delay: 2s;
 }
 
+.skils .content .col:nth-child(1) .row.active svg circle:nth-child(2) {
+	animation: skillAnime1 1.5s linear forwards;
+	animation-delay: 0.3s;
+}
 .skils .content .col:nth-child(2) .row svg circle:nth-child(2) {
 	stroke-dasharray: 440;
 	stroke-dashoffset: 440;
-	animation: skillAnime2 1.5s linear forwards;
-	animation-delay: 2s;
 	stroke: #13e9d7;
+}
+
+.skils .content .col:nth-child(2) .row.active svg circle:nth-child(2) {
+	animation: skillAnime2 1s linear forwards;
+	animation-delay: 0.3s;
 }
 
 
 .skils .content .col:nth-child(3) .row svg circle:nth-child(2) {
 	stroke-dasharray: 440;
 	stroke-dashoffset: 440;
-	animation: skillAnime3 1.5s linear forwards;
-	animation-delay: 2s;
 	stroke: #a513e9;
+}
+
+.skils .content .col:nth-child(3) .row.active svg circle:nth-child(2) {
+	animation: skillAnime3 1.5s linear forwards;
+	animation-delay: 0.3s;
 }
 
 .skils .content .col:nth-child(4) .row svg circle:nth-child(2) {
 	stroke-dasharray: 440;
 	stroke-dashoffset: 440;
-	animation: skillAnime4 1.5s linear forwards;
-	animation-delay: 2s;
 	stroke: #3ff321;
+}
+
+.skils .content .col:nth-child(4) .row.active svg circle:nth-child(2) {
+	animation: skillAnime4 0.4s linear forwards;
+	animation-delay: 0.2s;
 }
 
 
@@ -927,17 +934,14 @@ img {
 
 
 @media (max-width: 1080px) {
-	.home  {
-		
-	}
 	.home .container .content .info h1 {
-		font-size: 1.9em;
-	}
-	.home .container .content .info h2 {
 		font-size: 1.5em;
 	}
+	.home .container .content .info h2 {
+		font-size: 1.2em;
+	}
 	.home .container .content .info p {
-		font-size: 1.1em;
+		font-size: 0.9em;
 	}
 
 	.about .content img {
@@ -945,7 +949,7 @@ img {
 	}
 
 	.about .content .right h1 {
-		font-size: 1.3em;
+		font-size: 1em;
 	}
 
 	.about .content .right p {
@@ -972,9 +976,59 @@ img {
 	.about .content .right .section .box .card .card-info {
 		border-radius: 10px;
 		width: 70%;
-		height: 35%;
+		/*height: 35%;*/
 		padding: 15px 30px;
 	}
+
+	.about .content .right .section .box .card .card-info i {
+		font-size: 2em;
+		margin: 5px auto 25px;
+	}
+
+
+	.about .content .right .section .box .card .card-info h2 {
+		text-align: center;
+	}
+	.about .content .right .section .box .card .card-info p {
+		margin: 0 auto;
+		width: 80%;
+		text-align: center;
+	}
+
+	.about .content .right .section .box .card .card-info .info-content {
+		display: flex;
+		font-size: 0.95em;
+		justify-content: space-around;
+	}
+
+	.about .content .right .section .box .card .card-info .info-content.hobi {
+		justify-content: flex-start;
+		font-size: 0.9em;
+	}
+
+	.about .content .right .section .box .card .card-info .info-content.hobi ul {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	}
+
+
+	.about .content .right .section .box .card .card-info .info-content.hobi ul li,
+	.about .content .right .section .box .card .card-info .info-content.pengalaman ul li
+	 {
+		font-size: 0.8em;
+	}
+	.about .content .right .section .box .card .card-info .info-content.pengalaman ul li h3 {
+		font-size: 1em;
+	}
+
+	.about .content .right .section .box .card .card-info .info-content.hobi ul li p,
+	.about .content .right .section .box .card .card-info .info-content.pengalaman ul li p {
+		font-size: 0.8em;
+	}
+
+	.about .content .right .section .box .card .card-info .info-content ul:nth-child(2) {
+		font-size: 0.6em;
+	} 
 
 	.about .content .right .btn {
 		font-size: 0.7em;
@@ -1070,7 +1124,7 @@ img {
 	.about .content .right .section .box .card .card-info {
 		border-radius: 10px;
 		width: 70%;
-		height: 40%;
+		/*height: 40%;*/
 		padding: 15px 30px;
 	}
 
@@ -1123,7 +1177,7 @@ img {
 
 	.about .content .right .section .box .card .card-info {
 		width: 90%;
-		height: 60%;
+		/*height: 60%;*/
 	}
 
 	.about .content .right .section .box .card .card-info i {
@@ -1195,6 +1249,11 @@ img {
 	}
 	.about .content .right {
 		padding: 30px 0;
+	}
+
+	.about .content .right .section .box .card .card-info p,
+	.about .content .right .section .box .card .card-info p {
+		font-size: 0.6em;
 	}
 	.skils .content {
 		grid-template-columns: repeat(1, 1fr);
